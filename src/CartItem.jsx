@@ -2,18 +2,36 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import {
-  decreaseQuantity,
-  increaseQuantity,
+  calculateTotalAmount,
   removeItem,
   selectCartItems,
-  selectTotalCost,
   selectTotalQuantity,
+  updateQuantity,
 } from './CartSlice.jsx'
 import Header from './Header.jsx'
 
+// calculateTotalAmount(): total cost of all plants in the cart
+// (also exported from CartSlice.jsx so it can be reused anywhere)
+function getCartTotalAmount(items) {
+  return calculateTotalAmount(items)
+}
+
 function CartRow({ item }) {
   const dispatch = useDispatch()
+  // Total cost for this plant type: unit price * quantity
   const lineTotal = item.price * item.quantity
+
+  const handleIncreaseQuantity = () => {
+    dispatch(updateQuantity({ id: item.id, amount: 1 }))
+  }
+
+  const handleDecreaseQuantity = () => {
+    dispatch(updateQuantity({ id: item.id, amount: -1 }))
+  }
+
+  const handleDeleteItem = () => {
+    dispatch(removeItem(item.id))
+  }
 
   return (
     <li className="cart-item">
@@ -27,7 +45,7 @@ function CartRow({ item }) {
           type="button"
           className="quantity-button"
           aria-label={`Decrease quantity of ${item.name}`}
-          onClick={() => dispatch(decreaseQuantity(item.id))}
+          onClick={handleDecreaseQuantity}
         >
           −
         </button>
@@ -36,7 +54,7 @@ function CartRow({ item }) {
           type="button"
           className="quantity-button"
           aria-label={`Increase quantity of ${item.name}`}
-          onClick={() => dispatch(increaseQuantity(item.id))}
+          onClick={handleIncreaseQuantity}
         >
           +
         </button>
@@ -46,7 +64,7 @@ function CartRow({ item }) {
         type="button"
         className="delete-button"
         aria-label={`Remove ${item.name} from cart`}
-        onClick={() => dispatch(removeItem(item.id))}
+        onClick={handleDeleteItem}
       >
         Delete
       </button>
@@ -57,9 +75,11 @@ function CartRow({ item }) {
 function CartItem() {
   const cartItems = useSelector(selectCartItems)
   const totalQuantity = useSelector(selectTotalQuantity)
-  const totalCost = useSelector(selectTotalCost)
+  // Total cost of all items in the cart via calculateTotalAmount()
+  const totalCost = getCartTotalAmount(cartItems)
   const [checkoutMessage, setCheckoutMessage] = useState('')
 
+  // Checkout button: show a "Coming Soon" style message
   const handleCheckout = () => {
     setCheckoutMessage('Coming Soon — checkout will be available shortly!')
   }

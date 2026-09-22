@@ -3,6 +3,11 @@ import { addItem, selectCartItems } from './CartSlice.jsx'
 import Header from './Header.jsx'
 import { plantCategories } from './data/plants.js'
 
+/**
+ * ProductCard: thumbnail, name, price, and Add to Cart button.
+ * The button disables and its label changes to "Added to Cart" after the
+ * plant has been added to the shopping cart.
+ */
 function ProductCard({ plant }) {
   const dispatch = useDispatch()
   const cartItems = useSelector(selectCartItems)
@@ -33,12 +38,19 @@ function ProductCard({ plant }) {
   )
 }
 
+/**
+ * ProductList: product listing page grouped into categories.
+ * Each category contains at least six unique houseplants with a
+ * thumbnail, name, and price.
+ */
 function ProductList() {
   return (
     <div className="page-shell">
+      {/* Navbar shown on the product listing and shopping cart pages */}
       <Header />
       <main className="product-list-page">
         <h1 className="page-title">Our Houseplants</h1>
+        {/* Render each plant category (at least three categories) */}
         {plantCategories.map((category) => (
           <section key={category.name} className="plant-category">
             <h2 className="category-title">{category.name}</h2>
