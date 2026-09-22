@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d3b2e"/>
+      <stop offset="45%" stop-color="#145a40"/>
+      <stop offset="100%" stop-color="#0a2e22"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#8fd9a8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8fd9a8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="leaves" width="180" height="180" patternUnits="userSpaceOnUse">
+      <path d="M40 140c0-40 30-70 70-70-10 40-30 70-70 70z" fill="#1c6b4a" opacity="0.55"/>
+      <path d="M120 40c-35 5-60 35-55 75 35-10 60-35 55-75z" fill="#247a55" opacity="0.5"/>
+      <path d="M150 150c-25-25-25-60 5-85 15 30 15 60-5 85z" fill="#1a5c40" opacity="0.45"/>
+      <circle cx="50" cy="50" r="6" fill="#3a9a6a" opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="1440" height="900" fill="url(#sky)"/>
+  <rect width="1440" height="900" fill="url(#leaves)"/>
+  <rect width="1440" height="900" fill="url(#glow)"/>
+  <g opacity="0.5" fill="#0a2418">
+    <path d="M0 900V620c80-40 160-30 240 10 60-70 150-90 240-40 70-60 160-70 250-20 80-50 170-50 260 10 70-40 150-40 230 10 70-30 130-20 220 30v270z"/>
+  </g>
+  <g opacity="0.35" fill="#061a12">
+    <path d="M0 900V740c120-50 240-40 360 20 100-70 220-80 340-20 110-60 230-60 350 10 120-50 240-40 390 40v110z"/>
+  </g>
+</svg>

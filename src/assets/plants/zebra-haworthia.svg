@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <rect width="200" height="220" rx="16" fill="#f3f8f1"/>
+  <circle cx="100" cy="108" r="78" fill="#e4f0de"/>
+  <ellipse cx="100" cy="144" rx="40" ry="8" fill="#3e2f23"/><g transform="rotate(-14 78 150)">
+          <path d="M78 150 C65.4 102, 72.96 68.4, 78 54 C83.04 68.4, 90.6 102, 78 150Z" fill="#4f8f5a"/>
+          <path d="M78 140.4 L78 63.599999999999994" stroke="#e8f5e9" stroke-width="2" stroke-linecap="round"/>
+        </g><g transform="rotate(-4 94 150)">
+          <path d="M94 150 C80 91, 88.4 49.7, 94 32 C99.6 49.7, 108 91, 94 150Z" fill="#4f8f5a"/>
+          <path d="M94 138.2 L94 43.8" stroke="#e8f5e9" stroke-width="2" stroke-linecap="round"/>
+        </g><g transform="rotate(10 110 150)">
+          <path d="M110 150 C97.12 98, 104.848 61.60000000000001, 110 46 C115.152 61.60000000000001, 122.88 98, 110 150Z" fill="#4f8f5a"/>
+          <path d="M110 139.6 L110 56.39999999999999" stroke="#e8f5e9" stroke-width="2" stroke-linecap="round"/>
+        </g><g transform="rotate(20 122 150)">
+          <path d="M122 150 C110.8 108, 117.52 78.60000000000001, 122 66 C126.48 78.60000000000001, 133.2 108, 122 150Z" fill="#4f8f5a"/>
+          <path d="M122 141.6 L122 74.39999999999999" stroke="#e8f5e9" stroke-width="2" stroke-linecap="round"/>
+        </g><g transform="rotate(-26 70 150)">
+          <path d="M70 150 C59.5 113, 65.8 87.1, 70 76 C74.2 87.1, 80.5 113, 70 150Z" fill="#4f8f5a"/>
+          <path d="M70 142.6 L70 83.39999999999999" stroke="#e8f5e9" stroke-width="2" stroke-linecap="round"/>
+        </g><circle cx="62" cy="78" r="3" fill="#f4fff6" opacity="0.75"/><circle cx="81" cy="95" r="3" fill="#f4fff6" opacity="0.75"/><circle cx="100" cy="112" r="3" fill="#f4fff6" opacity="0.75"/><circle cx="119" cy="129" r="3" fill="#f4fff6" opacity="0.75"/><circle cx="138" cy="92" r="3" fill="#f4fff6" opacity="0.75"/><circle cx="79" cy="109" r="3" fill="#f4fff6" opacity="0.75"/><circle cx="98" cy="126" r="3" fill="#f4fff6" opacity="0.75"/>
+  <path d="M58 148h84l-8 54c-1 8-7 14-15 14H81c-8 0-14-6-15-14l-8-54z" fill="#3f7f8c"/>
+  <rect x="52" y="140" width="96" height="16" rx="5" fill="#2f646f"/>
+  <path d="M70 160h60l-4 34H74l-4-34z" fill="rgba(255,255,255,0.12)"/>
+
+</svg>
